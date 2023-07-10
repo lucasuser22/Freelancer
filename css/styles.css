@@ -43,6 +43,10 @@ body{
     border-radius: .5rem; /*redondear la esquinas del boton */
     width: 90%;
     text-align: center;
+    border: none;
+}
+.boton:hover {
+    cursor: pointer;
 }
 
 /* tipografia */
@@ -68,6 +72,21 @@ h1,h2,h3{
     .boton{
         width: auto; /* resetea el tamaño */
     }
+}
+/* UTILIDADES */
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px) { 
+    .w-100{
+        width: auto;
+    }
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
 }
 /* navegacion principal */
 .nav-bg{
@@ -147,5 +166,85 @@ border-radius: 1rem;
     align-items: flex-end;
 }
 
+@media (min-width: 768px) { 
+    /* servicios */
+.servicios{
+    display: grid;
+    /* grid-template-columns: 33.3% 33.3% 33.3%; */ 
+    /* grid-template-columns: 1fr 1fr 1fr un entero dividelo en 3 fracciones iguales */
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 5rem;
+}
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+.servicio p{
+    line-height: 2; /*dar un poco mas de interlineado */
+    text-align: center; /* centrar el texto */
+}
 
+/* generar los circulos en los que van los iconos y centrar el contenido y los circulos */
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* contacto */
+.formulario{
+    background-color: var(--gris);
+    width: min( 60rem, 100%); /* utilizar el valor mas pequeño  */
+    margin: 0 auto; /* centramos el formulario, esto se ocupa cuando el padre no es un display flex y 
+    cuando es un elemento como en este caso un formulario */
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos{
+
+}
+/* damos espaciado entre los campos que hay en el formulario */
+.campo {
+    margin-bottom: 1rem;
+}
+/* le agregamos detalles esteticos a los labels del formulario */
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+/* modificamos detalles esteticos de los textbox */
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+/* toda la clase boton la sigo ocupando pero si tiene la clase enviar le agrego un ancho de 100% */
+.enviar .boton {
+    width: 100%;
+}
