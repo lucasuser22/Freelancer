@@ -6,10 +6,10 @@
     --gris: #757575;
 }
 
-
+/* globales */
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* hack para box model */
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -17,24 +17,9 @@ html{
 body{
     font-size: 16px; /* 1 rem = 10px */
     font-family: 'Krub', sans-serif; /*estilo de letra sacado del google fonts */
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 100%); /* color degradado que se le aplica a toda la pagina (de abajo hacia arriba)*/
 }
 
-h1{
-    font-size: 3.8rem; /*tamaño de letra*/
-}
-h2{
-    font-size: 2.8rem;
-}
-h3{
-    font-size: 1.8rem;
-}
-h1,h2,h3{
-    text-align: center; /* alinear texto al centro */
-}
-
-.titulo span{ /*usando modulo (especificidad) */
-    font-size: 2rem;
-}
 .contenedor{
     max-width: 120rem;
     /*margin-top: 0;
@@ -59,11 +44,32 @@ h1,h2,h3{
     width: 90%;
     text-align: center;
 }
+
+/* tipografia */
+h1{
+    font-size: 3.8rem; /*tamaño de letra*/
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center; /* alinear texto al centro */
+}
+
+/*titulos */
+.titulo span{ /*usando modulo (especificidad) */
+    font-size: 2rem;
+}
+
 @media (min-width: 768px) { 
     .boton{
         width: auto; /* resetea el tamaño */
     }
 }
+/* navegacion principal */
 .nav-bg{
     background-color: var(--secundario); /*dandole color a la barra de navegacion */
 }
@@ -102,7 +108,7 @@ en este caso usaremo media queries ctrl + shift + p   user snippets    css json(
 @media (min-width: 480px) { 
     
 }
-
+/* hero */ 
 .hero {
     background-image: url(../img/hero.jpg); /* salir de carpeta con .. */
     background-repeat: no-repeat; /* para que la imagen no se repita a lo largo de la pagina */
@@ -128,7 +134,7 @@ en este caso usaremo media queries ctrl + shift + p   user snippets    css json(
 .contenido-hero p {
     color: var(--blanco);
 }
-
+/* para poner el contenido de la ubicacion al lado del logo ubicacion */
 .ubicacion{
     display: flex;
     align-items: flex-end;
