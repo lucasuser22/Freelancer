@@ -46,6 +46,24 @@ h1,h2,h3{
     */
     margin: 0 auto; /*crece hacia afuera del elemento */
 }
+.boton{
+    background-color: var(--secundario); /* color del boton */
+    color: var(--blanco); /* color de las letras */
+    padding: 1rem 3rem; /*tamaño del boton */
+    margin-top: 1rem; /* separar un poco mas el boton del demas contenido */
+    font-size: 2rem; 
+    text-decoration: none; /* quitar la linea de abajo del link */
+    text-transform: uppercase; /* convertir todas las letras en mayusculas */
+    font-weight: bold; /* bold = 700 osea negrita */
+    border-radius: .5rem; /*redondear la esquinas del boton */
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .boton{
+        width: auto; /* resetea el tamaño */
+    }
+}
 .nav-bg{
     background-color: var(--secundario); /*dandole color a la barra de navegacion */
 }
@@ -110,5 +128,11 @@ en este caso usaremo media queries ctrl + shift + p   user snippets    css json(
 .contenido-hero p {
     color: var(--blanco);
 }
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
 
 
