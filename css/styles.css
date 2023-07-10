@@ -105,8 +105,14 @@ en este caso usaremo media queries ctrl + shift + p   user snippets    css json(
          justify-content: space-between; /*mover contenido horizontalmente en este caso se movieron hacia el centro con un espaiciado uniforme*/
     }
 }
-@media (min-width: 480px) { 
-    
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(128,128,128,0.54);
+-moz-box-shadow: 0px 5px 15px 0px rgba(128,128,128,0.54);
+box-shadow: 0px 5px 15px 0px rgba(128,128,128,0.54);
+background-color: var(--blanco);
+padding: 2rem;
+border-radius: 1rem;
 }
 /* hero */ 
 .hero {
@@ -115,6 +121,7 @@ en este caso usaremo media queries ctrl + shift + p   user snippets    css json(
     background-size: cover; /* para controlar el tamaño de la imagen y se adapte al largo de la pagina */
     height: 450px;
     position: relative;
+    margin-bottom: 2rem; /* separamos un poco el espacio que hay entre hero y el cuadro de mis servicios */
 }
 .contenido-hero{
     position: absolute;
