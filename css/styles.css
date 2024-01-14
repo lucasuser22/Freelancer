@@ -10,7 +10,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box; /* hack para box model */
-    scroll-snap-type: y mandatory; /* para el scroll de arriba hacia abajo */
+    /*scroll-snap-type: y mandatory; /* para el scroll de arriba hacia abajo */
 }
 *, *:before, *:after {
     box-sizing: inherit;
